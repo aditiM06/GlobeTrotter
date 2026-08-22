@@ -5,6 +5,8 @@ import pool from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import { authenticateToken } from "./middleware/authMiddleware.js";
 import tripRoutes from "./routes/tripRoutes.js";
+import cityRoutes from "./routes/cityRoutes.js";
+import tripStopRoutes from "./routes/tripStopRoutes.js";
 
 dotenv.config();
 
@@ -18,6 +20,8 @@ app.use(express.json());
 // Authentication routes
 app.use("/api/auth", authRoutes);
 app.use("/api/trips", tripRoutes);
+app.use("/api/cities", cityRoutes);
+app.use("/api/trips", tripStopRoutes);
 
 // Test route
 app.get("/api/test", (req, res) => {
