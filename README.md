@@ -1,4 +1,4 @@
-Absolutely — for a hackathon repo, I'd keep it clean and short.
+
 
 ````markdown
 # 🌍 GlobeTrotter
