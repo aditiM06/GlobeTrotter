@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import pool from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
+import { authenticateToken } from "./middleware/authMiddleware.js";
+import tripRoutes from "./routes/tripRoutes.js";
 
 dotenv.config();
 
@@ -15,6 +17,7 @@ app.use(express.json());
 
 // Authentication routes
 app.use("/api/auth", authRoutes);
+app.use("/api/trips", tripRoutes);
 
 // Test route
 app.get("/api/test", (req, res) => {
@@ -39,6 +42,13 @@ app.get("/api/db-test", async (req, res) => {
       message: "Database connection failed",
     });
   }
+});
+
+app.get("/api/protected", authenticateToken, (req, res) => {
+  res.json({
+    message: "You accessed a protected route!",
+    user: req.user,
+  });
 });
 
 app.listen(PORT, () => {
