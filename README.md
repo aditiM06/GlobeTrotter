@@ -65,8 +65,6 @@ npm run dev
 
 Users can create their own account through the **Sign Up** page.
 
-For evaluation, a separate demo account can also be provided.
-
 > No personal credentials, database passwords, or secret keys are included in this repository.
 
 ## 🎯 Vision
