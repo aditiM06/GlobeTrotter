@@ -7,7 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { apiRequest } from "../api";
+import { apiRequest } from "../services/api";
 
 function Budget() {
   const { id } = useParams();
