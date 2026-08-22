@@ -7,6 +7,9 @@ import { authenticateToken } from "./middleware/authMiddleware.js";
 import tripRoutes from "./routes/tripRoutes.js";
 import cityRoutes from "./routes/cityRoutes.js";
 import tripStopRoutes from "./routes/tripStopRoutes.js";
+import activityRoutes from "./routes/activityRoutes.js";
+import itineraryActivityRoutes from "./routes/itineraryActivityRoutes.js";
+import expenseRoutes from "./routes/expenseRoutes.js";
 
 dotenv.config();
 
@@ -22,6 +25,9 @@ app.use("/api/auth", authRoutes);
 app.use("/api/trips", tripRoutes);
 app.use("/api/cities", cityRoutes);
 app.use("/api/trips", tripStopRoutes);
+app.use("/api/activities", activityRoutes);
+app.use("/api/trips", itineraryActivityRoutes);
+app.use("/api/trips", expenseRoutes);
 
 // Test route
 app.get("/api/test", (req, res) => {
