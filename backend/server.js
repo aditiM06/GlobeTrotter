@@ -10,6 +10,7 @@ import tripStopRoutes from "./routes/tripStopRoutes.js";
 import activityRoutes from "./routes/activityRoutes.js";
 import itineraryActivityRoutes from "./routes/itineraryActivityRoutes.js";
 import expenseRoutes from "./routes/expenseRoutes.js";
+import shareRoutes from "./routes/shareRoutes.js";
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use("/api/trips", tripStopRoutes);
 app.use("/api/activities", activityRoutes);
 app.use("/api/trips", itineraryActivityRoutes);
 app.use("/api/trips", expenseRoutes);
+app.use("/api", shareRoutes);
 
 // Test route
 app.get("/api/test", (req, res) => {
