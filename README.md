@@ -77,5 +77,5 @@ Built with ❤️ for the hackathon.
 
 ```
 
-**This is the version I'd actually put on GitHub.** Short, readable, and it doesn't pretend unfinished features are already implemented.
+Short, readable, and it doesn't pretend unfinished features are already implemented.
 ```
